@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(DefaultTargetFramework)</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="GeoCity.mmdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="GeoCity.mmdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaxMind.GeoIP2" Version="4.0.1" />
+    <PackageReference Include="Shyjus.BrowserDetector" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Services.Common\Services.Common.csproj" />
+  </ItemGroup>
+
+</Project>

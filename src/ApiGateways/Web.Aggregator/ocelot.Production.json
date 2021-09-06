@@ -1,0 +1,96 @@
+{
+  "Routes": [
+    // ASCVN.VNU.ACL - CMD
+    {
+      "DownstreamPathTemplate": "/api/cmd/{version}/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19801
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cmd/{version}/ACL/{url}",
+      "UpstreamHttpMethod": [ "Post", "Put", "Delete" ],
+      "Key": "acl.cmd.service",
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
+    },
+    // ASCVN.VNU.ACL - READ
+    {
+      "DownstreamPathTemplate": "/api/read/{version}/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19802
+        }
+      ],
+      "UpstreamPathTemplate": "/api/read/{version}/ACL/{url}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "acl.read.service"
+    },
+
+
+    // ASCVN.VNU.DANHMUC - CMD
+    {
+      "DownstreamPathTemplate": "/api/cmd/{version}/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19803
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cmd/{version}/DANH-MUC/{url}",
+      "UpstreamHttpMethod": [ "Post", "Put", "Delete", "Get" ],
+      "Key": "danhmuc.cmd.service"
+    },
+    // ASCVN.VNU.DANHMUC - READ
+    {
+      "DownstreamPathTemplate": "/api/read/{version}/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19804
+        }
+      ],
+      "UpstreamPathTemplate": "/api/read/{version}/DANH-MUC/{url}",
+      "UpstreamHttpMethod": [ "Post", "Get" ],
+      "Key": "danhmuc.read.service"
+    },
+
+    // ASCVN.VNU.HRM - CMD
+    {
+      "DownstreamPathTemplate": "/api/cmd/{version}/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19806
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cmd/{version}/HRM/{url}",
+      "UpstreamHttpMethod": [ "Post", "Put", "Delete" ],
+      "Key": "hrm.cmd.service"
+    },
+    // ASCVN.VNU.HRM - READ
+    {
+      "DownstreamPathTemplate": "/api/read/{version}/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 19807
+        }
+      ],
+      "UpstreamPathTemplate": "/api/read/{version}/HRM/{url}",
+      "UpstreamHttpMethod": [ "Post", "Get" ],
+      "Key": "hrm.read.service"
+    }
+
+  ],
+  "GlobalConfiguration": {}
+}

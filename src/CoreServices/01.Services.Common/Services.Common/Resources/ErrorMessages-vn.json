@@ -1,0 +1,21 @@
+﻿{
+  "ERR_COM_TOKEN_EXPIRED": "Token đã hết hạn sử dụng.",
+  "ERR_COM_TOKEN_INVALID": "Token không chính xác.",
+  "ERR_COM_REFRESH_TOKEN_INVALID": "Refresh Token không chính xác.",
+  "ERR_COM_REFRESH_TOKEN_EXPIRED": "Refresh Token đã hết hạn sử dụng.",
+  "ERR_COM_TOKEN_INVALID_SIGNATURE": "Chữ ký điện tử không chính xác.",
+  "ERR_COM_TOKEN_INVALID_AUDIENCE": "Audience không chính xác.",
+  "ERR_COM_TOKEN_INVALID_ISSUER": "Issuer không chính xác",
+  "ERR_COM_TOKEN_INVALID_SIGNING_KEY": "Khóa chữ ký không chính xác.",
+
+  "ERR_EMAIL_ADDRESS": "Đỉa chỉ Email không đúng định dạng.",
+  "ERR_COM_API_SERVER_ERROR": "Internal API Server Error!",
+  "ERR_COM_DB_SERVER_ERROR": "Internal Database Server Error!",
+  "ERR_COM_INVALID_FORMAT": "The field {0} is invalid format",
+
+  "ERR_COM_INVALID_FILE_SIGNATURE": "Chữ ký file không hợp lệ !",
+  "ERR_COM_INVALID_FILE_EXTENSION": "File này không nằm trong những file được cho phép upload.",
+  "ERR_COM_INVALID_FILE_NOT_EXIST": "File không tồn tại trong hệ thống",
+  "ERR_COM_INVALID_FILE_SIZE": "Kích cỡ của File quá lớn",
+  "ERR_COM_INVALID_FILE": "File không hợp lệ,"
+}

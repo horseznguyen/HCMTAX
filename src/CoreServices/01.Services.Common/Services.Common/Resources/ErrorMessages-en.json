@@ -1,0 +1,15 @@
+{
+  "ERR_COM_TOKEN_EXPIRED": "The Token is expired.",
+  "ERR_COM_TOKEN_INVALID": "The Token is invalid format.",
+  "ERR_COM_REFRESH_TOKEN_INVALID": "The Refresh Token is incorrect.",
+  "ERR_COM_REFRESH_TOKEN_EXPIRED": "The Refresh Token is expired.",
+  "ERR_COM_TOKEN_INVALID_SIGNATURE": "The Signature is invalid.",
+  "ERR_COM_TOKEN_INVALID_AUDIENCE": "The Audience is invalid.",
+  "ERR_COM_TOKEN_INVALID_ISSUER": "The Issuer is invalid.",
+  "ERR_COM_TOKEN_INVALID_SIGNING_KEY": "The Signing Key is invalid.",
+
+  "ERR_EMAIL_ADDRESS": "The email address is invalid",
+  "ERR_COM_API_SERVER_ERROR": "Internal API Server Error!",
+  "ERR_COM_DB_SERVER_ERROR": "Internal Database Server Error!",
+  "ERR_COM_INVALID_FORMAT": "The field {0} is invalid format"
+}
