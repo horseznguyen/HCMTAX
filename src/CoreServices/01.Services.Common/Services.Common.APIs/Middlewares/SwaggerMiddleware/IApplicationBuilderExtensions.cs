@@ -10,7 +10,7 @@ namespace Services.Common.APIs.Middlewares.SwaggerMiddleware
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ASC.BE API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TAX.BE API");
                 c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
             });
 

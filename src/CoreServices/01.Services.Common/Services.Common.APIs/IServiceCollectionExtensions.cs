@@ -4,11 +4,7 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Services.Common.APIs.Authorization;
 using Services.Common.APIs.Filters;
-using Services.Common.APIs.Runtime;
-using Services.Common.Authorization;
-using Services.Common.RunTime;
 using Services.Common.SecurityUtils.Models;
 using System;
 using System.Collections.Generic;
@@ -84,15 +80,6 @@ namespace Services.Common.APIs
             }
 
             services.AddApiVersioning(apiVersionOptions);
-
-            return services;
-        }
-
-        public static IServiceCollection AddCoreServices(this IServiceCollection services)
-        {
-            services.AddScoped<IPermissionChecker, PermissionChecker>();
-
-            services.AddScoped<IUserSessionInfo, UserSessionInfo>();
 
             return services;
         }
