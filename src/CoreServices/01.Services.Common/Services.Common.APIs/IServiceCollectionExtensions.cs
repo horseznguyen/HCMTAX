@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Services.Common.APIs.Filters;
+using Services.Common.SecurityUtils;
 using Services.Common.SecurityUtils.Models;
 using System;
 using System.Collections.Generic;
@@ -87,6 +88,15 @@ namespace Services.Common.APIs
         public static IServiceCollection AddJwtAuthentication(this IServiceCollection services)
         {
             var jwtOptions = AppSettings.Instance.Get<JwtOptions>(nameof(JwtOptions));
+
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            {
+                jwtOptions.SecretKey = SecurityHelper.Decrypt(jwtOptions.SecretKey, Environment.GetEnvironmentVariable("tax_secure_key", EnvironmentVariableTarget.Machine));
+
+                jwtOptions.Issuer = SecurityHelper.Decrypt(jwtOptions.Issuer, Environment.GetEnvironmentVariable("tax_secure_key", EnvironmentVariableTarget.Machine));
+
+                jwtOptions.Audience = SecurityHelper.Decrypt(jwtOptions.Audience, Environment.GetEnvironmentVariable("tax_secure_key", EnvironmentVariableTarget.Machine));
+            }
 
             services.Configure<JwtOptions>(_ =>
             {

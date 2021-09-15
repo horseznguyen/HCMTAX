@@ -20,6 +20,8 @@ namespace HCMTAX.API
 
                 while (dr.Read())
                 {
+                    Console.WriteLine("1");
+
                     T newObj = new T();
 
                     for (int i = 0; i < dr.FieldCount; i++)
